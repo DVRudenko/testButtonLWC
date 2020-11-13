@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Information" icon-name="custom:custom9">
+        <div class="slds-m-around_medium">
+
+            <template if:false={isShowUser}>
+                <c-show-related-contacts related-record-id={recordId}
+                    
+                    onuser={userHandler}>
+                </c-show-related-contacts>
+            </template> 
+
+            <template if:true={isShowUser}>
+                <c-show-user-info related-record-id={recordId}
+                    
+                    oncontact={contactHandler}>
+                </c-show-user-info>
+            </template> 
+            
+        </div>
+    </lightning-card>
+</template>
